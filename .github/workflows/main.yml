@@ -27,12 +27,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Installing Node
         uses: actions/setup-node@v2-beta
-         with:
-           node-version '12'
-       - name: Setup Surge
-         run: npm install --global surge
-         -name: Executing Deployment using Surge
-          run: surge ./expanse tracker.surge.sh --token${{expanse_app}}
+        with:
+           node-version: '12'
+      - name: Setup Surge
+        run: npm install --global surge
+      - name: Executing Deployment using Surge
+        run: surge ./expanse tracker.surge.sh --token${{expanse_app}}
           
            
        
